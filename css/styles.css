@@ -1,9 +1,8 @@
 :root{
---background-color: #3f51b5;
-}
-:root{
---active-buttons: #2196F3;
-}
-:root{
---unactive-buttons: #F5F4FA;
+--background-color1: #2F303A;
+--background-color2: #FFFFFF;
+--hovercolor1: #F5F4FA;
+--hovercolor2: #2196F3;
+--text1: #757575;
+--text2: #212121;
 }
