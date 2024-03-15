@@ -1,8 +1,51 @@
 :root{
---background-color1: #2F303A;
---background-color2: #FFFFFF;
---hovercolor1: #F5F4FA;
---hovercolor2: #2196F3;
---text1: #757575;
---text2: #212121;
+    --background-color1: #2F303A;
+    --background-color2: #FFFFFF;
+    --hovercolor1: #F5F4FA;
+    --hovercolor2: #2196F3;
+    --text1: #757575;
+    --text2: #212121;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+  
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}  
+
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: italic;
 }
