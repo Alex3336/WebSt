@@ -1,28 +1,14 @@
 :root{
-    --background-color1: #2F303A;
-    --background-color2: #FFFFFF;
-    --hovercolor1: #F5F4FA;
-    --hovercolor2: #2196F3;
-    --main-text: #757575;
-    --sub-text: #212121;
-}
-  
-.roboto-400 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400px;
-    font-style: normal;
-}
-  
-.roboto-500 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500px;
-    font-style: normal;
-}
-  
-.roboto-700 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700px;
-    font-style: normal;
+    --background-color-footer: #2F303A;
+    --background-color-main: #FFFFFF;
+    --hovercolor-none-active: #F5F4FA;
+    --hovercolor-active: #2196F3;
+    --sub-text: #757575;
+    --main-text: #212121;
+    --roboto-400: font-style: normal; font-weight: 400px; font-family: "Roboto", sans-serif;
+    --roboto-500: font-style: normal; font-weight: 500px; font-family: "Roboto", sans-serif;
+    --roboto-700: font-style: normal; font-weight: 700px; font-family: "Roboto", sans-serif;
+    --roboto-900: font-style: normal; font-weight: 900px; font-family: "Roboto", sans-serif;
 }
 
 .logo {
