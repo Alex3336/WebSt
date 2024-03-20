@@ -3,29 +3,29 @@
     --background-color2: #FFFFFF;
     --hovercolor1: #F5F4FA;
     --hovercolor2: #2196F3;
-    --text1: #757575;
-    --text2: #212121;
+    --main-text: #757575;
+    --sub-text: #212121;
 }
   
-.roboto-regular {
+.roboto-400 {
     font-family: "Roboto", sans-serif;
     font-weight: 400px;
     font-style: normal;
 }
   
-.roboto-medium {
+.roboto-500 {
     font-family: "Roboto", sans-serif;
     font-weight: 500px;
     font-style: normal;
 }
   
-.roboto-bold {
+.roboto-700 {
     font-family: "Roboto", sans-serif;
     font-weight: 700px;
     font-style: normal;
 }
 
-.raleway {
+.logo {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700px;
