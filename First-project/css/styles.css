@@ -16,3 +16,7 @@
     font-optical-sizing: auto;
     font-weight: 700px;
 }
+
+.header-ul, .main-ul, .footer-ul{
+    list-style-type: none;
+}
