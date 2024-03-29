@@ -17,6 +17,6 @@
     font-weight: 700px;
 }
 
-.header-ul, .main-ul, .footer-ul{
+ul{
     list-style-type: none;
 }
