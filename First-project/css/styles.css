@@ -11,11 +11,20 @@
     --roboto-900: font-style: normal; font-weight: 900px; font-family: "Roboto", sans-serif;
 }
 
-.logo {
+.logo{
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700px;
+    color: var(--hovercolor-active);
 }
+
+.logo-studio{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    color: var(--main-text);
+}
+
 
 ul{
     list-style-type: none;
