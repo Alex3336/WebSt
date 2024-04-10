@@ -11,6 +11,12 @@
     --roboto-900: font-style: normal; font-weight: 900px; font-family: "Roboto", sans-serif;
 }
 
+.container{
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
 .logo{
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
