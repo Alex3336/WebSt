@@ -31,7 +31,27 @@
     color: var(--main-text);
 }
 
-
 ul{
     list-style-type: none;
+}
+
+.header-ul{
+    display: flex;
+}
+
+.info-ul{
+    display: flex;
+}
+
+.button-ul{
+    display: flex;
+}
+
+.main-ul{
+    display: flex;
+}
+
+.container > .footer-ul{
+    display: flex;
+    flex-direction: column;
 }
