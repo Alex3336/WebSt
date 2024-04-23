@@ -1,18 +1,16 @@
 :root{
-    --background-color-footer: #2F303A;
-    --background-color-main: #FFFFFF;
+    --first-background-color: #2F303A;
+    --second-background-color-main: #FFFFFF;
     --hovercolor-none-active: #F5F4FA;
     --hovercolor-active: #2196F3;
     --sub-text: #757575;
     --main-text: #212121;
-    --roboto-400: font-style: normal; font-weight: 400px; font-family: "Roboto", sans-serif;
-    --roboto-500: font-style: normal; font-weight: 500px; font-family: "Roboto", sans-serif;
-    --roboto-700: font-style: normal; font-weight: 700px; font-family: "Roboto", sans-serif;
-    --roboto-900: font-style: normal; font-weight: 900px; font-family: "Roboto", sans-serif;
+    --main-font: ;font-family: "Roboto";
+    --logo-font: ;font-family: "Raleway";
 }
 
-.body{
-    font-family: "Roboto";
+*{
+    font-family: var(--main-font);
 }
 
 .container{
@@ -21,41 +19,172 @@
     margin: 0 auto;
 }
 
-.logo{
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700px;
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-text);
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+a:hover{
     color: var(--hovercolor-active);
+    font-family: var(--main-font);
+}
+
+.logo{
+    font-family: var(--logo-font);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30.52px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: var(--hovercolor-active);
+    width: 188px;
 }
 
 .logo-studio{
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700px;
-    color: var(--main-text);
+    font-family: var(--logo-font);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30.52px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #000000;
 }
 
-ul{
-    list-style-type: none;
+.header-links-ul{
+    margin-left: 215px;
+    margin-right: 42px;
 }
 
-.header-ul{
-    display: flex;
+.header-links-li{
+    height: 80px;
+    margin-inline: 25px;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.header-nav{
+    color: var(--second-background-color-main);
+    width: 1600px;
+    height: 80px;
+    margin-left: -215px;
+}
+
+.header-nav > ul{
+    display: inline-flex;
+    align-items: center;
+    justify-items: baseline;
 }
 
 .info-ul{
+    height: 80px;
+    margin-left: 232px;
+}
+
+.info-li{
+    margin-left: 51px;
+}
+
+.cap{
+    width: 1600px;
+    height: 600px;
+    top: 80px;
+    background-color: var(--first-background-color);
+    margin-left: -215px;
+}
+
+.cap > .cap-h1{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--second-background-color-main);
+    width: 700px;
+    height: 120px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 44px;
+    padding-top: 200px;
+    padding-bottom: 40px;
+}
+
+.cap > .cap-button{
+    display: flex;
+    width: 220px;
+    height: 50px;
+    border-radius: 4px 4px 4px 4px;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    background-color: var(--hovercolor-active);
+    color: var(--second-background-color-main);   
+    align-items: center; 
+    justify-content: center;
+    margin: auto;
+}
+
+.features-ul{
     display: flex;
 }
 
-.button-ul{
+.features-li{
     display: flex;
-}
-
-.main-ul{
-    display: flex;
-}
-
-.container > .footer-ul{
-    display: flex;
+    margin-block: 95px;
     flex-direction: column;
+    padding-inline: 15px;
 }
+
+.features-h2{
+    font-family: var(--main-font);
+    color: var(--main-text);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.features-p{
+    font-family: var(--main-font);
+    color: var(--sub-text);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.our-work-ul{
+    width: 1170px;
+    height: 294px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+}
+
+.our-work-li{
+    height: 294px;
+    display: inline-flex;
+    height: auto;
+}
+
+.our-work-p{
+    font-family: var(--main-font);
+    color: var(--main-text);
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
