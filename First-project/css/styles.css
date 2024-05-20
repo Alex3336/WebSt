@@ -13,8 +13,13 @@
     font-family: var(--main-font);
 }
 
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
 .container{
-    width: 1170px;
+    width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -87,6 +92,7 @@ a:hover{
     height: 80px;
     margin-left: -215px;
     border-bottom: 1px solid #ececec; 
+    margin: auto;
 }
 
 .header-nav > ul{
@@ -104,32 +110,35 @@ a:hover{
     margin-left: 44px;
 }
 
-.cap{
+.hero{
     width: 1600px;
     height: 600px;
-    top: 80px;
     background-color: var(--first-background-color);
     margin-left: -215px;
+    background-image: linear-gradient( rgba(47,48,58,0.4), rgba(47,48,58,0.4)),
+    url(../img/Webstudio_main/hero.png);
+    margin: auto;
 }
 
-.cap > .cap-h1{
+.cap-h1{
     font-weight: 900;
     text-transform: uppercase;
     color: var(--second-background-color-main);
     width: 700px;
     height: 120px;
-    margin: 0px auto;
+    margin: auto;
     text-align: center;
     font-size: 44px;
     padding-top: 200px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
-.cap > .cap-button{
+.cap-button{
     display: flex;
     width: 220px;
     height: 50px;
-    border-radius: 4px 4px 4px 4px;
+    border: 0;
+    border-radius: 4px;
     font-family: var(--main-font);
     font-size: 16px;
     font-weight: 700;
@@ -140,17 +149,64 @@ a:hover{
     align-items: center; 
     justify-content: center;
     margin: auto;
+    margin-top: 90px;
 }
 
 .features-ul{
     display: flex;
+    gap: 30px;
+    margin-block: 95px;
+}
+
+.features-li::before{
+    display: block;
+    content: " ";
+    width: calc(100%);
+    height: 120px;
+    border-radius: 4px;
+    border: 0;
+    background-color: var(--hovercolor-none-active);
+}
+
+.features-li:nth-child(1):before{
+    content: " ";
+    background-image: url(../img/Webstudio_main/features\ 1.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    size: 70px 70px;
+}
+
+.features-li:nth-child(2):before{
+    content: " ";
+    background-image: url(../img/Webstudio_main/features\ 2.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    size: 70px 70px;
+}
+
+.features-li:nth-child(3):before{
+    content: " ";
+    background-image: url(../img/Webstudio_main/features\ 3.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    size: 70px 70px;
+}
+
+.features-li:nth-child(4):before{
+    content: " ";
+    background-image: url(../img/Webstudio_main/features\ 4.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    size: 70px 70px;
 }
 
 .features-li{
-    display: flex;
-    margin-block: 95px;
     flex-direction: column;
-    padding-inline: 15px;
+    width: calc((100% - 90px) / 4);
 }
 
 .features-h2{
@@ -191,19 +247,21 @@ a:hover{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    
 }
 
 .our-team-background{
     width: 1600px;
     height: 648px;
     background-color: var(--hovercolor-none-active);
-    margin-left: -215px;
+    margin: auto;
 }
 
 .our-team-div{
     background-color: var(--second-background-color-main);
     height: 368px;
+    border: 0;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 6px 0px rgba(21,21,21,0.4);
 }
 
 .our-team-h2{
@@ -258,7 +316,7 @@ a:hover{
     background-color: var(--first-background-color);
     width: 1600px;
     height: 252px;
-    margin-left: -215px;
+    margin: auto;
 }
 
 .logo-footer{
@@ -307,7 +365,7 @@ a:hover{
 }
 
 .button-ul{
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -326,7 +384,7 @@ a:hover{
 .button{
     width: 73px;
     height: 38px;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 4px;
     border: 0px solid;
     display: flex;
     row-gap: 8px;
@@ -339,7 +397,7 @@ a:hover{
 .button-p{
     padding-inline: 22px;
     padding-block: 4px;
-    border-radius: 4px 4px 4px 4px;
+    border-radius: 4px;
     border: 0px solid;
     margin: 0px;
     font-family: var(--main-font);
@@ -351,20 +409,22 @@ a:hover{
     text-wrap: nowrap;
 }
 
-.button:active{
+.button:hover{
+    box-shadow: 0 2px 6px 0px rgba(21,21,21,0.4);
     background-color: var(--hovercolor-active);
 }
 
-.projects-div{
+.project-container{
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 92px;
 }
 
-.projects-ul{
+.project-ul{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .project-h2{
@@ -377,9 +437,7 @@ a:hover{
     text-align: left;
     Width: 322px;
     Height: 36px;
-    margin-left: 24px;
-    margin-top: 20px;
-    margin-bottom: 4px;
+    margin: 0;
 }
 
 .project-p{
@@ -390,22 +448,30 @@ a:hover{
     line-height: 30px;
     letter-spacing: 0.03em;
     text-align: left;
-    margin-bottom: 20px;
-    margin-top: 0px;
-    margin-left: 24px;
     width: 322px;
     height: 30px;
+    margin: 0;
 }
 
-.project-li{
+.project-li {
+    width: calc((100% - 60px) / 3);
     height: 404px;
-    width: 370px;
-    height: 404px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.project-li:hover{
+    box-shadow: 0px 2px 7px 0px var(--main-text);
+}
+
+.project-div {
+    height: 110px;
     border: 1px solid #EEEEEE;
-}
-
-.project-img{
-    size: calc();
+    border-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    letter-spacing: 0;
 }
