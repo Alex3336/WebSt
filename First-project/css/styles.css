@@ -13,9 +13,21 @@
     font-family: var(--main-font);
 }
 
-.body{
+.header{
     display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
     flex-direction: column;
+}
+
+.footer{
+    display: flex;
+    justify-content : center;
 }
 
 .container{
@@ -55,7 +67,8 @@ a:hover{
     letter-spacing: 0.03em;
     text-align: left;
     color: var(--hovercolor-active);
-    width: 188px;
+    width: 187px;
+    margin: 0;
 }
 
 .logo-studio{
@@ -72,52 +85,44 @@ a:hover{
     font-family: var(--main-font);
 }
 
-.header-links-ul{
-    margin-left: 215px;
-    margin-right: 42px;
-}
-
-.header-links-li{
-    height: 80px;
-    margin-inline: 25px;
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
 .header-nav{
     color: var(--second-background-color-main);
     width: 1600px;
     height: 80px;
-    margin-left: -215px;
-    border-bottom: 1px solid #ececec; 
-    margin: auto;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.header-nav > ul{
-    display: inline-flex;
+.header-nav > .container{
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
     align-items: center;
-    justify-items: baseline;
+    justify-content: space-between;
+}
+
+.header-links-ul{
+    display: flex;
+    gap: 50px;
+    align-items: center;
 }
 
 .info-ul{
-    height: 80px;
-    margin-left: 232px;
-}
-
-.info-li{
-    margin-left: 44px;
+    display: flex;
+    gap: 50px;
 }
 
 .hero{
     width: 1600px;
     height: 600px;
     background-color: var(--first-background-color);
-    margin-left: -215px;
     background-image: linear-gradient( rgba(47,48,58,0.4), rgba(47,48,58,0.4)),
     url(../img/Webstudio_main/hero.png);
-    margin: auto;
 }
 
 .cap-h1{
@@ -253,7 +258,6 @@ a:hover{
     width: 1600px;
     height: 648px;
     background-color: var(--hovercolor-none-active);
-    margin: auto;
 }
 
 .our-team-div{
@@ -312,11 +316,10 @@ a:hover{
     margin-top: 10px;
 }
 
-.footer{
+.footer-background{
     background-color: var(--first-background-color);
     width: 1600px;
     height: 252px;
-    margin: auto;
 }
 
 .logo-footer{
