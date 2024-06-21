@@ -9,39 +9,30 @@
     --logo-font: "Raleway";
 }
 
-*{
-    font-family: var(--main-font);
-}
-
 .header{
     display: flex;
     justify-content: center;
 }
-
 .main{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
 }
-
 .footer{
     display: flex;
     justify-content : center;
 }
-
 .container{
     width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 }
-
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
 a{
     text-decoration: none;
     color: var(--main-text);
@@ -52,7 +43,6 @@ a{
     letter-spacing: 0.02em;
     text-align: left;
 }
-
 a:hover{
     color: var(--hovercolor-active);
     font-family: var(--main-font);
@@ -70,7 +60,6 @@ a:hover{
     width: 187px;
     margin: 0;
 }
-
 .logo-studio{
     font-family: var(--logo-font);
     font-size: 26px;
@@ -84,7 +73,6 @@ a:hover{
 .header-links-a{
     font-family: var(--main-font);
 }
-
 .header-nav{
     color: var(--second-background-color-main);
     width: 100%;
@@ -96,7 +84,6 @@ a:hover{
     align-items: center;
     justify-content: space-between;
 }
-
 .header-nav > .container{
     width: 1200px;
     padding: 0 15px;
@@ -105,13 +92,11 @@ a:hover{
     align-items: center;
     justify-content: space-between;
 }
-
 .header-links-ul{
     display: flex;
     gap: 50px;
     align-items: center;
 }
-
 .info-ul{
     display: flex;
     gap: 50px;
@@ -125,7 +110,6 @@ a:hover{
     url(../img/Webstudio_main/hero.png);
     background-size: cover;
 }
-
 .cap-h1{
     font-weight: 900;
     text-transform: uppercase;
@@ -138,7 +122,6 @@ a:hover{
     padding-top: 200px;
     padding-bottom: 30px;
 }
-
 .cap-button{
     display: flex;
     width: 220px;
@@ -163,7 +146,10 @@ a:hover{
     gap: 30px;
     margin-block: 95px;
 }
-
+.features-li{
+    flex-direction: column;
+    width: calc((100% - 90px) / 4);
+}
 .features-li::before{
     display: block;
     content: " ";
@@ -173,48 +159,38 @@ a:hover{
     border: 0;
     background-color: var(--hovercolor-none-active);
 }
-
-.features-li:nth-child(1):before{
+.features-li:nth-child(1)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/features\ 1.svg);
+    background-image: url(../img/Webstudio_main/radar.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
     size: 70px 70px;
 }
-
-.features-li:nth-child(2):before{
+.features-li:nth-child(2)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/features\ 2.svg);
+    background-image: url(../img/Webstudio_main/clock.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
     size: 70px 70px;
 }
-
-.features-li:nth-child(3):before{
+.features-li:nth-child(3)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/features\ 3.svg);
+    background-image: url(../img/Webstudio_main/laptop.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
     size: 70px 70px;
 }
-
-.features-li:nth-child(4):before{
+.features-li:nth-child(4)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/features\ 4.svg);
+    background-image: url(../img/Webstudio_main/astronaut.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
     size: 70px 70px;
 }
-
-.features-li{
-    flex-direction: column;
-    width: calc((100% - 90px) / 4);
-}
-
 .features-h2{
     font-family: var(--main-font);
     color: var(--main-text);
@@ -222,27 +198,12 @@ a:hover{
     font-weight: 700;
     text-align: left;
 }
-
 .features-p{
     font-family: var(--main-font);
     color: var(--sub-text);
     font-size: 14px;
     font-weight: 400;
     text-align: left;
-}
-
-.our-work-ul{
-    width: 1170px;
-    height: 294px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 85px;
-}
-
-.our-work-li{
-    height: 294px;
-    display: inline-flex;
-    height: auto;
 }
 
 .our-work-h2{
@@ -254,21 +215,25 @@ a:hover{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.our-work-ul{
+    width: 1170px;
+    height: 294px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+}
+.our-work-li{
+    height: 294px;
+    display: inline-flex;
+    height: auto;
+}
+
 
 .our-team-background{
     width: 100%;
     height: 648px;
     background-color: var(--hovercolor-none-active);
 }
-
-.our-team-div{
-    background-color: var(--second-background-color-main);
-    height: 368px;
-    border: 0;
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0 2px 6px 0px rgba(21,21,21,0.4);
-}
-
 .our-team-h2{
     color: var(--main-text);
     font-family: var(--main-font);
@@ -281,19 +246,23 @@ a:hover{
     margin-top: 0;
     margin-bottom: 50px;
 }
-
 .our-team-ul{
     width: 1170px;
     height: 368px;
     display: flex;
     margin: auto;
 }
-
 .our-team-li{
     display: inline-flex;
     margin: auto;
 }
-
+.our-team-div{
+    background-color: var(--second-background-color-main);
+    height: 368px;
+    border: 0;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 6px 0px rgba(21,21,21,0.4);
+}
 .our-team-name{
     font-family: var(--main-font);
     font-size: 16px;
@@ -304,7 +273,6 @@ a:hover{
     margin-top: 30px;
     margin-bottom: 10px;
 }
-
 .our-team-worker{
     font-family: var(--main-font);
     color: var(--sub-text);
@@ -322,7 +290,6 @@ a:hover{
     width: 100%;
     height: 252px;
 }
-
 .logo-footer{
     font-family: var(--logo-font);
     font-size: 26px;
@@ -333,7 +300,6 @@ a:hover{
     color: var(--hovercolor-active);
     margin: 0;
 }
-
 .logo-studio-footer{
     font-family: var(--logo-font);
     font-size: 26px;
@@ -343,20 +309,16 @@ a:hover{
     text-align: left;
     color: var(--second-background-color-main);
 }
-
 .footer-p{
     color: var(--second-background-color-main);
     margin-bottom: 0;
 }
-
 .footer-a{
     color: rgba(255, 255, 255, 0.6);
 }
-
 .footer-li-email{
     margin-block: 9px;
 }
-
 .footer-ul{
     margin-left: 215px;
     padding-block: 60px;
@@ -367,7 +329,6 @@ a:hover{
     align-items: center;
     justify-content: center;
 }
-
 .button-ul{
     border-radius: 4px;
     display: flex;
@@ -378,13 +339,11 @@ a:hover{
     margin-top: 90px;
     margin-bottom: 50px;
 }
-
 .button-li{
     display: inline-flex;
     justify-content: space-between;
     row-gap: 10px;
 }
-
 .button{
     width: 73px;
     height: 38px;
@@ -396,9 +355,6 @@ a:hover{
     inline-size: auto;
     padding: 0px;
     row-gap: 8px;
-}
-
-.button-p{
     padding-inline: 22px;
     padding-block: 4px;
     border-radius: 4px;
@@ -412,7 +368,6 @@ a:hover{
     text-align: center;
     text-wrap: nowrap;
 }
-
 .button:hover{
     box-shadow: 0 2px 6px 0px rgba(21,21,21,0.4);
     background-color: var(--hovercolor-active);
@@ -425,13 +380,11 @@ a:hover{
     gap: 15px;
     margin-bottom: 92px;
 }
-
 .project-ul{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-
 .project-h2{
     color: var(--main-text);
     font-family: var(--main-font);
@@ -444,7 +397,6 @@ a:hover{
     Height: 36px;
     margin: 0;
 }
-
 .project-p{
     color: var(--sub-text);
     font-family: var(--main-font);
@@ -457,7 +409,6 @@ a:hover{
     height: 30px;
     margin: 0;
 }
-
 .project-li {
     width: calc((100% - 60px) / 3);
     height: 404px;
@@ -465,11 +416,9 @@ a:hover{
     flex-wrap: wrap;
     align-content: center;
 }
-
 .project-li:hover{
     box-shadow: 2px 2px 2px rgba(117,117,117,0.5);
 }
-
 .project-div {
     height: 110px;
     border: 1px solid #EEEEEE;
