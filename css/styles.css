@@ -155,7 +155,7 @@ a:hover{
 }
 .features-li:nth-child(1)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/radar.svg);
+    background-image: url(../img/Webstudio_main/symbol-defs.svg#svg-radar);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -163,7 +163,7 @@ a:hover{
 }
 .features-li:nth-child(2)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/clock.svg);
+    background-image: url(../img/Webstudio_main/symbol-defs.svg#svg-clock);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -171,7 +171,7 @@ a:hover{
 }
 .features-li:nth-child(3)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/laptop.svg);
+    background-image: url(../img/Webstudio_main/symbol-defs.svg#svg-laptop);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -179,8 +179,8 @@ a:hover{
 }
 .features-li:nth-child(4)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/astronaut.svg);
-    background-repeat: no-repeat;
+    background-image: url(../img/Webstudio_main/symbol-defs.svg#svg-astronaut);
+    background-repeat: no-repeat; 
     background-position-y: center;
     background-position-x: center;
     size: 70px 70px;
@@ -287,20 +287,35 @@ a:hover{
     display: flex;
     column-gap: 10px;
 }
-.icon-container{
+.icon-item{
     width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 }
-.icon{
-    width: 1px;
-    height: 1px;
+.icon-container{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+.circle-container{
+    width: 44px;
+    height: 44px;
+    opacity: 0;
+}
+.icon-container{
     fill: #AFB1B8;
 }
-.circle{
-    opacity: 0;
+.icon-item:hover{
+    cursor: pointer;
+    .circle-container{
+        fill: var(--hovercolor-active);
+        opacity: 1;
+    }
+    .icon-container{
+        fill: #FFFFFF;
+    }
 }
 
 .footer-background{
