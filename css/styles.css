@@ -155,7 +155,7 @@ a:hover{
 }
 .features-li:nth-child(1)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/symbol-defs.svg#svg-radar);
+    background-image: url(../img/Webstudio_main/radar.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -163,7 +163,7 @@ a:hover{
 }
 .features-li:nth-child(2)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/symbol-defs.svg#svg-clock);
+    background-image: url(../img/Webstudio_main/clock.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -171,7 +171,7 @@ a:hover{
 }
 .features-li:nth-child(3)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/symbol-defs.svg#svg-laptop);
+    background-image: url(../img/Webstudio_main/laptop.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -179,7 +179,7 @@ a:hover{
 }
 .features-li:nth-child(4)::before{
     content: " ";
-    background-image: url(../img/Webstudio_main/symbol-defs.svg#svg-astronaut);
+    background-image: url(../img/Webstudio_main/astronaut.svg);
     background-repeat: no-repeat; 
     background-position-y: center;
     background-position-x: center;
