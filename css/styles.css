@@ -10,28 +10,6 @@
     --icon-font: 'WebStudio';
 }
 
-@font-face{
-    font-family: 'WebStudio';
-    src:
-      url('../fonts/WebStudio.ttf?33hjpo') format('truetype'),
-      url('../fonts/WebStudio.woff?33hjpo') format('woff'),
-      url('../fonts/WebStudio.svg?33hjpo#WebStudio') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
-  
-[class^="font-"], [class*=" font-"]{
-    font-family: 'WebStudio';
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .body{
     display: flex;
     flex-direction: column;
@@ -212,6 +190,7 @@ a:hover{
     z-index: index;
 }
 .modal-close{
+    cursor: pointer;
     position: absolute;
     background-color: #ffffff;
     padding: 0;
@@ -226,6 +205,11 @@ a:hover{
     width: 11px;
     height: 11px;
 }
+.modal-close:hover{
+    .cross{
+        fill: var(--hovercolor-active);
+    }
+}
 .form-title{
     color: var(--main-text);
     font-family: var(--main-font);
@@ -236,6 +220,23 @@ a:hover{
     text-align: center;
     margin: 0;
     margin-bottom: 6px;
+}
+.form-label{
+    height: 58px;
+    display: block;
+    margin-block: 10px;
+    position: relative;
+}
+.modal-icon{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    fill: var(--main-text);
+    bottom: 11px;
+    left: 11px;
 }
 .form-text{
     font-family: var(--main-font);
@@ -255,8 +256,11 @@ a:hover{
     border-radius: 4px;
     padding: 0;
 }
-.form-input:active{
+.form-input:focus{
     border: 1px solid var(--hovercolor-active);
+    + .modal-icon{
+        fill: var(--hovercolor-active);
+    }
 }
 .comment{
     width: 100%;
