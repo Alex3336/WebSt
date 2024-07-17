@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
 </head>
-<body class="body">
+<body class="body no-scroll">
     <header class="header">
         <nav class="header-nav">
             <div class="container">
@@ -21,8 +21,18 @@
                     <li class="header-links-li"><a class="header-links-a" href="#">Контакти</a></li>
                 </ul>
                 <ul class="info-ul">
-                    <li class="info-li"><a class="info-a font-mail" href="#">info@devstudio.com</a></li>
-                    <li class="info-li"><a class="info-a font-phone" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                    <li class="info-li">
+                        <svg class="decoration-email decoration">
+                            <use href="./img/Webstudio_main/symbol-defs.svg#svg-email"></use>
+                        </svg>
+                        <a class="info-a font-mail" href="#">info@devstudio.com</a>
+                    </li>
+                    <li class="info-li">
+                        <svg class="decoration-smartphone decoration">
+                            <use href="./img/Webstudio_main/symbol-defs.svg#svg-smartphone"></use>
+                        </svg>
+                        <a class="info-a font-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -30,7 +40,37 @@
     <main class="main">
         <div class="hero">
             <h1 class="cap-h1">Ефективні рішення для вашого бізнесу</h1>
-            <button class="cap-button">Замовити послугу</button>
+            <button class="cap-button" data-modal-open>Замовити послугу</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="modal-close" data-modal-close>
+                        <svg class="cross">
+                            <use href="./img/Webstudio_main/symbol-defs.svg#svg-cross"></use>
+                        </svg>
+                    </button>
+                    <form class="modal-form" type="text">
+                        <h2 class="form-title">Залиште свої дані, ми вам передзвонимо</h2>
+                        <label class="form-label">
+                            <p class="form-text">Ім'я</p>
+                            <input type="text"class="form-input" required>
+                            <p class="form-text">Телефон</p>
+                            <input type="tel" class="form-input" required>
+                            <p class="form-text">Пошта</p>
+                            <input type="email" class="form-input" required>
+                            <p class="form-text">Коментар</p>
+                            <textarea class="comment" placeholder="Введіть текст"></textarea>
+                            <div class="contract">
+                                <input type="checkbox" class="contract-checkbox" required>
+                                <label class="contract-text">Погоджуюся з розсилкою та приймаю</label>
+                                <a href="#" id="contract-link">Умови договору</a>
+                            </div>
+                            <div class="send-button-container">
+                                <button class="send-button">Відправити</button>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="container">
             <ul class="features-ul">
@@ -292,5 +332,6 @@
             </div>
         </div>
     </footer>
+    <script src="./modal.js"></script>
 </body>
 </html>
