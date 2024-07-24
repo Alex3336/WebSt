@@ -4,7 +4,7 @@
     <title>WebStudio</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="html">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
@@ -16,9 +16,9 @@
             <div class="container">
                 <ul class="header-links-ul">
                     <li class="logo-li"><p class="logo">Web<span class="logo-studio">Studio</span></p></li>
-                    <li class="header-links-li"><a class="header-links-a" href="./index.html">Студія</a></li>
-                    <li class="header-links-li"><a class="header-links-a" href="./WebStudio_portfolio.html">Портфоліо</a></li>
-                    <li class="header-links-li"><a class="header-links-a" href="#">Контакти</a></li>
+                    <li class="header-links-li"><a class="header-links is-active" href="./index.html">Студія</a></li>
+                    <li class="header-links-li"><a class="header-links" href="./WebStudio_portfolio.html">Портфоліо</a></li>
+                    <li class="header-links-li"><a class="header-links" href="#">Контакти</a></li>
                 </ul>
                 <ul class="info-ul">
                     <li class="info-li">
@@ -51,36 +51,34 @@
                     <form class="modal-form" type="text">
                         <h2 class="form-title">Залиште свої дані, ми вам передзвонимо</h2>
                         <label class="form-label">
-                            Ім'я
+                            <p class="form-text">Ім'я</p>
+                            <input type="text" class="form-input" required>
                             <svg class="modal-icon">
                                 <use href="./img/Webstudio_main/symbol-defs.svg#svg-people"></use>
                             </svg>
-                            <input type="text"class="form-input" required>
                         </label>
                         <label class="form-label">
-                            Телефон
+                            <p class="form-text">Телефон</p>
+                            <input type="tel" class="form-input" required>
                             <svg class="modal-icon">
                                 <use href="./img/Webstudio_main/symbol-defs.svg#svg-telephone"></use>
                             </svg>
-                            <input type="tel" class="form-input" required>
                         </label>
                         <label class="form-label">
-                            Пошта
+                            <p class="form-text">Пошта</p>
+                            <input type="email" class="form-input" required>
                             <svg class="modal-icon">
                                 <use href="./img/Webstudio_main/symbol-defs.svg#svg-mail"></use>
                             </svg>
-                            <input type="email" class="form-input" required>
                         </label>
-                        <label class="form-label">
-                            Коментар
-                            <svg>
-                                <use></use>
-                            </svg>
+                        <label class="comment-label">
+                            <p class="form-text">Коментар</p>
                             <textarea class="comment" placeholder="Введіть текст"></textarea>
                         </label>
                         <div class="contract">
-                            <input type="checkbox" class="contract-checkbox" required>
-                            <label class="contract-text">Погоджуюся з розсилкою та приймаю</label>
+                            <input id="form-checkbox" type="checkbox" class="contract-checkbox" required>
+                            <label for="form-checkbox"></label>
+                            <p class="contract-text">Погоджуюся з розсилкою та приймаю</p>
                             <a href="#" id="contract-link">Умови договору</a>
                         </div>
                         <div class="send-button-container">
@@ -346,6 +344,16 @@
                         <div class="circle-footer"></div>
                     </li>
                 </ul>
+                <form class="spam-form">
+                    <label for="spam" class="spam-subscribe">Підпишіться на розсилку</label>
+                    <input id="spam" type="email" placeholder="E-mail" required>
+                    <button class="spam-accept">
+                        Підписатися
+                        <svg class="spam-icon">
+                            <use href="./img/Webstudio_main/symbol-defs.svg#svg-send-icon"></use>
+                        </svg>
+                    </button>
+                </form>
                 <!-- діти -->
             </div>
         </div>
