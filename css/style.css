@@ -40,11 +40,13 @@ a{
     line-height: 16.41px;
     letter-spacing: 0.02em;
     text-align: left;
+    transition-property: color, font-family;
 }
 a:hover{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
     color: var(--hovercolor-active);
     font-family: var(--main-font);
-    font-weight: 500;
 }
 
 .logo{
@@ -69,7 +71,7 @@ a:hover{
 }
 
 .header-nav{
-    color: var(--second-background-color-main);
+    color: #FFFFFF;
     width: 100%;
     height: 80px;
     border-bottom: 1px solid #ececec;
@@ -94,6 +96,7 @@ a:hover{
 }
 .header-links{
     font-family: var(--main-font);
+    transition-property: color, padding-bottom, border-bottom, border-radius;
 }
 .header-links:hover, a.is-active{
     color: var(--hovercolor-active);
@@ -114,6 +117,7 @@ a:hover{
     height: 16px;
     fill: var(--sub-text);
     margin-right: 10px;
+    transition-property: fill;
 }
 .decoration-smartphone{
     width: 10px;
@@ -126,9 +130,12 @@ a:hover{
     font-weight: 500;
     line-height: 16.41px;
     letter-spacing: 0.02em;
+    transition-property: color;
 }
 .info-li:hover{
     .decoration{
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
         fill: var(--hovercolor-active);
     }
     .info-a{
@@ -150,7 +157,7 @@ a:hover{
 .cap-h1{
     font-weight: 900;
     text-transform: uppercase;
-    color: var(--second-background-color-main);
+    color: #FFFFFF;
     width: 700px;
     height: 120px;
     text-align: center;
@@ -168,7 +175,7 @@ a:hover{
     font-weight: 700;
     line-height: 30px;
     background-color: var(--hovercolor-active);
-    color: var(--second-background-color-main);
+    color: #FFFFFF;
     cursor: pointer;
     margin-top: 90px;
 }
@@ -212,9 +219,12 @@ a:hover{
 .cross{
     width: 11px;
     height: 11px;
+    transition-property: fill;
 }
 .modal-close:hover{
     .cross{
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
         fill: var(--hovercolor-active);
     }
 }
@@ -258,6 +268,7 @@ a:hover{
     left: 11px;
     bottom: 11px;
     fill: var(--main-text);
+    transition-property: fill;
 }
 .form-text{
     font-family: var(--main-font);
@@ -278,11 +289,16 @@ a:hover{
     border-radius: 4px;
     padding: 0;
     padding-left: 41px;
+    transition-property: border-color;
 }
 .form-input:focus + .modal-icon{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
     fill: var(--hovercolor-active);
 }
 .form-input:focus, .comment:focus{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
     border-color: var(--hovercolor-active);
 }
 .comment{
@@ -298,6 +314,7 @@ a:hover{
     line-height: 14.06px;
     letter-spacing: 0.01em;
     text-align: left;
+    transition-property: border-color;
 }
 .contract{
     display: flex;
@@ -484,7 +501,7 @@ a:hover{
     width: calc((100% - 90px) / 4);
 }
 .our-team-div{
-    background-color: var(--second-background-color-main);
+    background-color: #FFFFFF;
     height: 428px;
     border: 0;
     border-radius: 0px 0px 4px 4px;
@@ -538,18 +555,24 @@ a:hover{
 }
 .icon{
     fill: #AFB1B8;
+    transition-property: fill;
 }
 .circle{
     border-radius: 360px;
     width: 44px;
     height: 44px;
+    transition-property: background-color;
 }
 .icon-item:hover{
     cursor: pointer;
     .circle{
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
         background-color: var(--hovercolor-active);
     }
     .icon{
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
         fill: #FFFFFF;
     }
 }
@@ -579,6 +602,7 @@ a:hover{
     background-color: #FFFFFF;
     width: 170px;
     height: 92px;
+    transition-property: border;
 }
 .clients-text{
     color: var(--main-text);
@@ -595,11 +619,16 @@ a:hover{
     width: 94px;
     height: 52px;
     fill: rgba(175, 177, 184, 1);
+    transition-property: fill;
 }
 .clients-item:hover{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
     cursor: pointer;
     border: 1px solid var(--hovercolor-active);
     .client{
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
         fill: var(--hovercolor-active);
     }
 }
@@ -629,16 +658,9 @@ a:hover{
     height: 38px;
     border-radius: 4px;
     border: 0px solid;
-    display: flex;
-    row-gap: 8px;
-    block-size: 38px;
     inline-size: auto;
-    padding: 0px;
-    row-gap: 8px;
     padding-inline: 22px;
     padding-block: 4px;
-    border-radius: 4px;
-    border: 0px solid;
     margin: 0px;
     font-family: var(--main-font);
     font-size: 16px;
@@ -647,11 +669,15 @@ a:hover{
     letter-spacing: 0.03em;
     text-align: center;
     text-wrap: nowrap;
+    transition-property: box-shadow, background-color, color;
 }
 .button:hover{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    cursor: pointer;
     box-shadow: 0 2px 6px 0px rgba(21,21,21,0.4);
     background-color: var(--hovercolor-active);
-    color: var(--second-background-color-main);
+    color: #FFFFFF;
 }
 
 .project-container{
@@ -672,8 +698,11 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    transition-property: box-shadow;
 }
 .project-li:hover{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
     box-shadow: 2px 2px 2px rgba(117,117,117,0.5);
 }
 .project-div {
@@ -689,19 +718,14 @@ a:hover{
     bottom: 0;
 }
 .project-img{
-    z-index: 2;
     width: 100%;
     position: absolute;
 }
 .hover-project{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
     width: 100%;
     height: 294px;
     position: absolute;
-    background-color: rgba(33,150,243,0.9);
+    transition-property: background-color, display, align-items, justify-content;
 }
 .hover-project-text{
     font-family: var(--main-font);
@@ -710,13 +734,25 @@ a:hover{
     line-height: 28px;
     letter-spacing: 0.03em;
     text-align: left;
-    color: #FFFFFF;
     width: 322px;
     height: 168px;
+    opacity: 0;
+    transition-property: color, opacity;
 }
 .project-li:hover{
     .hover-project{
-        z-index: 3;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
+        background-color: rgba(33,150,243,0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .hover-project-text{
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 250ms;
+            color: #FFFFFF;
+            opacity: 1;
+        }
     }
 }
 .project-h2{
@@ -774,10 +810,10 @@ a:hover{
     line-height: 30.52px;
     letter-spacing: 0.03em;
     text-align: left;
-    color: var(--second-background-color-main);
+    color: #FFFFFF;
 }
 .footer-text{
-    color: var(--second-background-color-main);
+    color: #FFFFFF;
     margin: 0;
 }
 .footer-link{
@@ -823,10 +859,13 @@ a:hover{
     width: 44px;
     height: 44px;
     background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
 }
 .icon-item-footer:hover{
     cursor: pointer;
     .circle-footer{
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
         background-color: var(--hovercolor-active);
     }
 }
@@ -863,9 +902,11 @@ a:hover{
     letter-spacing: 0.03em;
     text-align: left;
     padding-left: 15px;
-    
+    transition-property: color;
 }
 #spam:focus{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
     color: rgba(255,255,255,0.6);
 }
 .spam-accept{
