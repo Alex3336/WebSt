@@ -6,7 +6,6 @@
     --main-text: #212121;
     --main-font: "Roboto";
     --logo-font: "Raleway";
-    --icon-font: 'WebStudio';
 }
 
 .body{
@@ -40,13 +39,12 @@ a{
     line-height: 16.41px;
     letter-spacing: 0.02em;
     text-align: left;
-    transition-property: color, font-family;
+    transition-property: color;
 }
 a:hover{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
     color: var(--hovercolor-active);
-    font-family: var(--main-font);
 }
 
 .logo{
@@ -336,7 +334,6 @@ a:hover{
     margin-right: 4px;
 }
 #contract-link{
-    border-bottom: 1px solid var(--hovercolor-active);
     font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
@@ -344,6 +341,16 @@ a:hover{
     letter-spacing: 0.03em;
     text-align: left;
     color: var(--hovercolor-active);
+    position: relative;
+}
+#contract-link::after{
+    content: "";
+    height: 1px;
+    width: 112px;
+    bottom: 6px;
+    position: absolute;
+    display: block;
+    border-bottom: 1px solid var(--hovercolor-active);
 }
 .send-button-container{
     display: flex;
