@@ -200,7 +200,7 @@ a:hover{
     height: 581px;
     transform: translate(-50% -50%);
     padding: 40px;
-    z-index: index;
+    z-index: auto;
 }
 .modal-close{
     cursor: pointer;
@@ -396,7 +396,6 @@ a:hover{
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
-    size: 70px 70px;
 }
 .features-li:nth-child(2)::before{
     content: " ";
@@ -404,7 +403,6 @@ a:hover{
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
-    size: 70px 70px;
 }
 .features-li:nth-child(3)::before{
     content: " ";
@@ -412,7 +410,6 @@ a:hover{
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
-    size: 70px 70px;
 }
 .features-li:nth-child(4)::before{
     content: " ";
@@ -420,7 +417,6 @@ a:hover{
     background-repeat: no-repeat; 
     background-position-y: center;
     background-position-x: center;
-    size: 70px 70px;
 }
 .features-h2{
     font-family: var(--main-font);
@@ -706,60 +702,55 @@ a:hover{
     flex-wrap: wrap;
     align-content: center;
     transition-property: box-shadow;
-}
-.project-li:hover{
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
-    box-shadow: 2px 2px 2px rgba(117,117,117,0.5);
+    overflow: hidden;
 }
 .project-div {
     position: absolute;
     height: 110px;
     border: 1px solid #EEEEEE;
     border-top: 0;
+    background-color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     letter-spacing: 0;
     bottom: 0;
+    z-index: 2;
 }
 .project-img{
     width: 100%;
     position: absolute;
 }
 .hover-project{
+    opacity: 0;
+    padding-left: 25px;
+    padding-top: 63px;
+    margin: 0;
     width: 100%;
     height: 294px;
-    position: absolute;
-    transition-property: background-color, display, align-items, justify-content;
-}
-.hover-project-text{
     font-family: var(--main-font);
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
+    color: #FFFFFF;
     letter-spacing: 0.03em;
     text-align: left;
-    width: 322px;
-    height: 168px;
-    opacity: 0;
-    transition-property: color, opacity;
+    position: absolute;
+    z-index: 1;
 }
 .project-li:hover{
+    box-shadow: 2px 2px 2px rgba(117,117,117,0.5);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
     .hover-project{
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 250ms;
-        background-color: rgba(33,150,243,0.9);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .hover-project-text{
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 250ms;
-            color: #FFFFFF;
-            opacity: 1;
-        }
+        animation-name: bottomToUp;
+        animation-duration: 250ms;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        opacity: 1;
+        background-color: rgba(33, 150, 243, 0.9);
     }
 }
 .project-h2{
@@ -938,4 +929,13 @@ a:hover{
     width: 24px;
     height: 24px;
     fill: #FFFFFF;
+}
+
+@keyframes bottomToUp{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
