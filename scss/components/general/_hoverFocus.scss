@@ -50,7 +50,7 @@
 }
 .clients-item:hover{
     @extend %transition;
-    border: $hover-color-active;
+    border: $hover-color-active 1px solid;
     cursor: pointer;
     .client{
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
