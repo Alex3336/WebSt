@@ -1,0 +1,59 @@
+.hero{
+    min-width: 480px;    height: 400px;
+    background-color: $footer-background-color;
+    background-image: linear-gradient( 
+        rgba($footer-background-color , 0.4), 
+        rgba($footer-background-color , 0.4)
+        ),
+    url(../img/Webstudio_main/hero.png
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    display: flex;    justify-content: center;
+    align-items: center;    flex-wrap: wrap;
+    flex-direction: column;    margin-bottom: 60px;
+    @media (min-width:768px) and (max-width:1199px) {
+        min-width: 768px;    max-width: 1200px;
+    }
+    @media (min-width:1200px) {
+        min-width: 1200px; height: 600px;
+        margin-bottom: 94px;
+    }
+}
+.hero-title{
+    @extend %main-900;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-bottom: 32px;        
+    width: 360px;
+    height: 84px;
+    font-size: 26px;
+    line-height: 42px;
+    @media (min-width:1200px) {
+        width: 696px;
+        height: 120px;
+        font-size: 44px;
+        line-height: 60px;
+        margin-bottom: 30px;
+    }
+}
+.hero-button, %button{
+    @extend %main-700;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    background-color: $hover-color-active;
+    border-radius: 4px;
+    text-align: center;
+    color: $white;
+}
+.hero-button{
+    @media (min-width:1200px) {
+        width: 216px; 
+    }
+}

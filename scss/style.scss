@@ -1,0 +1,13 @@
+@import "utilities/vars", 
+        "./utilities/placeholder";
+@import "components/general/generalStyles", 
+        "components/general/header",
+        "components/general/footer",
+        "components/general/hoverFocus",
+        "components/index/hero", 
+        "components/index/modal", 
+        "components/index/features", 
+        "components/index/ourTeam",
+        "components/index/ourClients",
+        "components/portfolio/buttons",
+        "components/portfolio/projects";

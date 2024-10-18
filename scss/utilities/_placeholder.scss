@@ -1,0 +1,29 @@
+%main-900{
+    font-family: $main-font;
+    font-weight: 900;
+    color: $white;
+}
+%main-700{
+    font-family: $main-font;
+    font-weight: 700;
+    color: $title-text-color
+}
+%main-500{
+    font-family: $main-font;
+    font-weight: 500;
+    color: $title-text-color;
+}
+%main-400{
+    font-family: $main-font;
+    font-weight: 400;
+    color: $discription-text-color;
+}
+%small-text{
+    font-size: 12px;
+    line-height: 14.06px;
+    letter-spacing: 0.02em;
+}
+%transition{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}

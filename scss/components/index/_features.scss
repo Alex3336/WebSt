@@ -1,0 +1,89 @@
+.features-list{
+    display: flex;    flex-wrap: wrap;
+    flex-direction: row;    row-gap: 30px;
+    justify-content: center;    column-gap: 30px;
+    max-width: 450px;
+    @media (min-width:768px) {
+        max-width: 768px;
+    }
+    @media (min-width:1200px) {
+        max-width: 1200px;
+        flex-wrap: nowrap;
+    }
+    margin-bottom: 60px;
+}
+.features-item{
+    display: flex;
+    flex-wrap: nowrap;    flex-direction: column;
+    row-gap: 10px;    width: min-content;
+    min-height: 224px;    max-height: 248px;
+    &::before{
+        content: "";
+        width: 450px;    height: 120px;
+        background-color: $main-background-color;
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+        background-position: 50% 50%;
+        @media (min-width:768px) and (max-width:1199px) {
+            width: 354px;
+        }
+        @media (min-width:1200px) {
+            width: 270px;
+        }
+    }
+}
+$svg-list: (":nth-child(1)": "radar",":nth-child(2)": "clock", ":nth-child(3)": "laptop", ":nth-child(4)": "astronaut");
+@each $pseudo, $svg in $svg-list{
+    .features-item#{$pseudo}::before{
+        content: "";
+        background-image: url("/img/Webstudio_main/#{$svg}.svg");
+    }
+}
+.features-title{
+    @extend %main-700;    margin-top: 20px;
+    font-size: 14px;    line-height: 16.41px;
+    letter-spacing: 0.03em;    text-align: center;
+    @media (min-width:768px) and (max-width:1199px){
+        text-align: left;
+    }
+}
+.features-text{
+    @extend %main-400;    font-size: 14px;
+    line-height: 24px;    letter-spacing: 0.03em;
+}
+.our-work-title-container{
+    margin: auto;
+}
+.our-work-title{
+    @extend %main-700;
+    display: none;
+    @media (min-width:1200px) {    font-size: 36px;
+        text-align: center;
+        margin-top: 34px;
+    }
+}
+.our-work-list{
+    display: none;
+    @media (min-width:1200px) {    
+        width: 1170px;    height: 294px;
+        display: flex;    justify-content: space-between;
+        margin-bottom: 94px;    margin-top: 50px;
+    }
+}
+.our-work-item{
+    height: 294px;
+    display: inline-flex;
+    position: relative;
+}
+.our-work-description{
+    position: absolute;    display: flex;
+    bottom: 0;    color: $white;
+    width: 370px;   height: 70px;
+    background-color: rgba($footer-background-color, 0.8);
+    justify-content: center;    align-items: center;
+}
+.description-text{
+    @extend %main-700;    color: $white;
+    text-transform: uppercase;    font-size: 14px;
+    line-height: 16.41px;    letter-spacing: 0.03em;
+}

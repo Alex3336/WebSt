@@ -1,0 +1,74 @@
+.header-link:hover, .is-active{
+    @extend .header-link, %transition;
+    border: none;
+    @media (min-width:768px) {
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
+        color: $hover-color-active;
+        border-bottom: $hover-color-active solid 4px;
+        border-radius: 2px;
+        padding-bottom: 28px;
+    }
+}
+.info-item:hover{
+    cursor: pointer;
+    .decoration{
+        @extend %transition;
+        fill: $hover-color-active;
+    }
+    .info-link{
+        @extend %transition;
+        color: $hover-color-active;
+    }
+}
+.modal-close:hover{
+    .cross{
+        @extend %transition;
+        fill: $hover-color-active;
+    }
+}   
+.form-input, .comment{
+    &:focus{
+        @extend %transition;
+        border: 1px solid $hover-color-active;
+        ~ .modal-icon{
+            @extend %transition;
+            fill: $hover-color-active;
+        }
+    }
+}
+.icon-item:hover, .icon-item-footer:hover{
+    cursor: pointer;
+    .circle, .circle-footer{
+        @extend %transition;
+        background-color: $hover-color-active;
+    }
+    .icon, .icon-footer{
+        @extend %transition;
+        fill: $white;
+    }
+}
+.clients-item:hover{
+    @extend %transition;
+    cursor: pointer;
+    .client{
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
+        fill: $hover-color-active;
+    }
+}
+.project-item:hover{
+    @extend %transition;
+    box-shadow: 1px 4px 6px 0px rgba($black, 0.161),
+                0px 1px 1px 0px rgba($black, 0.122),
+                0px 4px 4px 0px rgba($black, 0.059);
+    overflow: visible;
+}
+.project-item:hover .project-hover {
+    bottom: 0;
+}
+.button:hover{
+    @extend %transition;
+    color: $white;
+    background-color: $hover-color-active;
+}

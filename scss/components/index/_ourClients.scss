@@ -1,0 +1,33 @@
+.clients-list{
+    display: flex;    flex-direction: row;
+    gap: 30px;    flex-wrap: wrap;
+    justify-content: center;    margin-block: 60px;
+    max-width: 450px;
+    @media (min-width:768px) and (max-width:1199px) {
+        max-width: 768px;
+    }
+    @media (min-width:1200px) {
+        margin-block: 94px;
+        row-gap: 50px;    max-width: none;
+    }
+}
+.clients-item{
+    display: inherit; justify-content: inherit;
+    border: 1px solid $svg-color;    border-radius: 4px;
+    width: 170px;    height: 92px;
+    align-items: center;
+}
+.clients-title{
+    @extend %main-700;
+    font-size: 36px;
+    line-height: 42.19px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.clients-title-item{
+    width: 100%;
+}
+.client{
+    width: 94px;    height: 52px;
+    fill: $svg-color;
+}

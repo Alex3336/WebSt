@@ -1,0 +1,106 @@
+.project-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 92px;
+}
+.project-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width:768px) {
+        flex-direction: row;
+    }
+}
+.project-item{
+    position: relative;
+    width: 450px;
+    height: 404px;
+    display: flex;    flex-wrap: wrap;
+    transition-property: box-shadow;    overflow: hidden;
+    @media (min-width:768px) and (max-width:1199px) {
+        width: 354px; height: 440px;
+    }
+    @media (min-width:1200px) {
+        width: 370px;
+    }
+}
+$projects: (":nth-child(1)": "tehnokrak",
+            ":nth-child(2)": "orlean",
+            ":nth-child(3)": "seafood",
+            ":nth-child(4)": "prime",
+            ":nth-child(5)": "boxes",
+            ":nth-child(6)": "borders",
+            ":nth-child(7)": "limited",
+            ":nth-child(8)": "label",
+            ":nth-child(9)": "business",);
+.project-img{
+    width: 100%;    height: 294px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@each $pseudo, $project in $projects{
+    .project-item#{$pseudo}{
+        .project-img{
+            background-image: url(/img/WebStudio_portfolio/mobile/#{$project}.png);
+        }
+    }
+}
+@media (min-width:768px) and (max-width:1199px) {
+    @each $pseudo, $project in $projects{
+        .project-item#{$pseudo}{
+            .project-img{
+                background-image: url(/img/WebStudio_portfolio/tablet/#{$project}.png);
+            }
+        }
+    }
+}
+@media (min-width:1200px) {
+    @each $pseudo, $project in $projects{
+        .project-item#{$pseudo}{
+            .project-img{
+                background-image: url(/img/WebStudio_portfolio/dekstop/#{$project}.png);
+            }
+        }
+    }
+}
+.project-hover {
+    @extend %main-400, %transition;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $hover-color-active;
+    color: $white;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    bottom: -100%;
+    display: flex;
+    justify-content: center;
+    padding: 63px 0 63px 24px;
+}
+.project-div {
+    bottom: 0;
+    position: absolute;
+    height: 110px;
+    width: 100%;    flex-direction: column;
+    border: 1px solid $portfolio-border-color;
+    background-color: $white;
+    display: flex;    flex-wrap: wrap;
+    border-top: 0;    row-gap: 4px;
+    padding: 20px 0 0 23px;
+}
+.project-title{
+    @extend %main-700;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+}
+.project-text{
+    @extend %main-400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+}

@@ -1,0 +1,41 @@
+.main > .container{
+    row-gap: 40px;    padding-top: 60px;
+    @media (min-width:768px) and (max-width:1199px) {
+        row-gap: 30px;
+    }
+    @media (min-width:1200){
+        row-gap: 50px;    padding-top: 94px;
+    }
+}
+.button-container{
+    display: flex;    justify-content: flex-start;
+    align-items: center;    width: 326px;
+    @media (min-width:768px) {
+        width: 575px;
+    }
+}
+.button-ul{
+    display: flex;    align-items: center;
+    column-gap: 8px;    width: 326px;
+    height: 91px;    flex-wrap: wrap;
+    @media (min-width:768px) {
+        flex-wrap: nowrap;
+        width: min-content;
+        width: 575px;
+    }
+}
+.button-li{
+    display: inline-flex;    row-gap: 10px;
+    justify-content: space-between;
+}
+.button{
+    @extend %button, %main-500;
+    height: min-content;    width: min-content;
+    background-color: $main-background-color;
+    color: $title-text-color;    text-wrap: nowrap;
+    padding: 6px 22px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    transition-property: color, background-color;
+}

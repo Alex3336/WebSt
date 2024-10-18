@@ -1,0 +1,76 @@
+.our-team-background{
+    background-color: $main-background-color;
+    height: min-content;
+}
+.our-team-background > .container{
+    flex-direction: column;
+}
+.our-team-list{
+    display: flex;    flex-wrap: wrap;
+    flex-direction: row;    gap: 30px;
+    justify-content: center;    margin-block: 60px;
+    max-width: 1120px;
+    @media (min-width:1200px) {
+        margin-block: 94px;
+        max-width: 1200px;
+    }
+}
+.team-title-item{
+    width: 100%;
+}
+.team-title{
+    @extend %main-700;    font-size: 28px;
+    text-align: center;
+    line-height: 32.81px;    letter-spacing: 0.03em;
+}
+.our-team-item{
+    width: 450px;    height: 622px;
+    @media (min-width:768px) and (max-width:1199px) {
+        width: 354px;    height: 536px;
+    }
+    @media (min-width:1200px) {
+        width: 270px;    height: 428px;
+    }
+}
+.our-team-div{
+    height: inherit;    display: flex;
+    flex-direction: column;    align-items: center;
+    row-gap: 10px;    background-color: $white;
+    box-shadow:
+    0px 2px 1px 0px rgba($black,0.2),
+    0px 1px 3px 0px rgba($black,0.14),
+    0px 1px 1px 0px rgba($black,0.12);
+    border-radius: 0 0 4px 4px;
+}
+.our-team-name{
+    @extend %main-500;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 0.03em;
+    margin-top: 20px;    margin-bottom: 6px;
+}
+.our-team-worker{
+    @extend %main-400;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 0.03em;
+}
+.icon-list{
+    width: 206px;    height: 44px;
+    display: flex;    column-gap: 10px;
+}
+.icon-item{
+    display: flex;    width: 44px;
+    justify-content: center;    align-items: center;
+}
+.icon{
+    width: 20px;    height: 20px;
+    position: absolute;
+}
+.icon{
+    fill: $svg-color;
+}
+.circle{
+    border-radius: 22px;
+    width: 44px;    height: 44px;
+}

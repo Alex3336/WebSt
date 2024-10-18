@@ -1,0 +1,188 @@
+.header-nav{
+    height: 60px;
+    @media (min-width:768px) {
+        height: 80px;
+    }
+    border-bottom: $header-border solid 1px;
+    align-content: center;
+}
+.header-nav > .container{
+    flex-wrap: nowrap;    flex-direction: row;
+    justify-content: space-between;    width: 480px;
+}
+.nav-container{
+    display: flex;    flex-direction: row;
+    flex-wrap: wrap;    align-items: center;
+    column-gap: 92px;
+    @media (min-width:768px) and (max-width:1199px) {
+        column-gap: 88px;
+    }
+}
+.header-links-list{
+    display: none;
+    height: 16px;    column-gap: 50px;
+    @media (min-width:768px) and (max-width:1199px) {    
+        display: flex;    align-items: center;
+        flex-direction: row;    justify-content: space-between;
+        min-width: 283px;    max-width: 288px;
+    }
+    @media (min-width:1200px) {    
+        display: flex;    align-items: center;
+        flex-direction: row;    justify-content: space-between;
+        min-width: 285px;    max-width: 287px;
+    }
+}
+.header-link:nth-child(1){
+    margin-right: 5px;
+}
+.menu .link{
+    display: block;  
+    padding: 10px;
+    color: #fff;  
+    text-decoration: none;
+}
+.header-link{
+    @extend %main-700;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.02em;
+}
+.info-list{
+    display: none;
+    @media (min-width:768px) and (max-width:1199px) {
+        display: flex;    flex-direction: column;
+        align-items: flex-start;
+        width: 138px;
+        row-gap: 10px;
+    }
+    @media (min-width:1200px) {
+        display: flex;
+        align-items: flex-start;
+        width: 333px;    flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.info-item{
+    height: 14px;    display: flex;
+    align-items: center;    column-gap: 8px;
+    @media (min-width:1200px) {
+        height: 16px;    column-gap: 10px;
+    }
+}
+.info-link{
+    @extend %main-400, %small-text;
+}
+.decoration{
+    height: inherit;
+    @media (min-width:768px) and (max-width:1199px) {
+        max-width: 14px;
+    }
+    @media (min-width:1200px) {
+        max-width: 16px;
+    }
+}
+.page-header {
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+.page-header .container {  min-height: 80px;
+    display: flex;  align-items: center;
+    justify-content: flex-end;}
+.menu {
+    display: flex;  padding: 0;
+    margin: 0;  list-style: none;
+    @media (max-width: 767px) {
+        .menu {    
+            display: none;
+        }
+    }
+}
+.menu-container {
+    position: fixed;  top: 0;
+    left: 0;  width: 100vw;
+    height: 100vh;    padding: 48px 40px;
+    background-color: $white;  z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
+.menu-container > .container{
+    justify-content: flex-start;    align-content: space-between;
+    flex-direction: row;
+    height: 700px;
+}
+.menu-container.is-open {
+    transform: translateX(0);
+}
+.menu-toggle {
+    min-height: 40px;  min-width: 40px;
+    display: flex;  align-items: center;
+    justify-content: center;
+    margin: 0;  padding: 0;
+    background-color: transparent;
+    cursor: pointer;  border: none;
+    border-radius: 50%;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+.container .menu-toggle{
+    position: absolute;  
+    right: 8px;    top: -8px;
+    color: #fff;
+}
+.menu-toggle.js-close-menu{
+    top: -42px;
+}
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+.menu-link{
+    @extend %main-500;
+    font-size: 40px;
+    line-height: 46.88px;
+    letter-spacing: 0.02em;
+}
+.menu-div{
+    display: flex;    flex-direction: column;
+    row-gap: 64px;
+}
+.menu-info-item{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+.menu-info-link{
+    @extend %main-500;
+    font-size: 24px;
+    line-height: 28.13px;
+    color: $discription-text-color;
+    &:nth-child(1){
+        color: $hover-color-active;
+        font-size: 34px;
+        line-height: 39.84px;
+        letter-spacing: 0.02em;
+    }
+}
+.media-list{
+    display: flex;
+    flex-direction: row;
+}
+.media-item{
+    padding-inline: 10px;
+    border-right: 1px solid rgba($title-text-color, 0.2);
+    &:first-child{
+        padding-left: 0;
+    }
+    &:last-child{
+        border: none;
+        padding-right: 0;
+    }
+}
+.media-link{
+    @extend %main-500;
+    color: $hover-color-active;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+}

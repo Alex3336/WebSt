@@ -1,0 +1,120 @@
+.footer-background{
+    height: min-content;    background-color: $footer-background-color;
+    display: flex;    flex-wrap: wrap;
+    flex-direction: column;    align-items: center;
+    padding-block: 60px;
+}
+.footer-background > .container{
+    row-gap: 60px;
+    @media (min-width:768px) and (max-width:1199px) {
+        flex-direction: row;    justify-content: space-around;
+        max-width: 768px;
+    }
+    @media (min-width:1200px) {
+        flex-direction: row;    justify-content: space-between;
+        min-width: 1200px;
+    }
+}
+.footer-list{
+    height: min-content;    flex-direction: column;
+    row-gap: 8px;    display: flex;
+    align-items: center;
+    @media (min-width:1200px) {
+        align-items: flex-start;
+    }
+}
+.footer-logo-item{
+    margin-bottom: 12px;
+}
+.footer-text{
+    @extend %main-400;
+    color: $white;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+}
+.footer-link{
+    @extend .footer-text;
+    color: rgba($white, 0.6);
+}
+.join-item{
+    width: inherit;
+}
+.join-text{
+    @extend %main-700;    color: $white;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;    text-align: center;
+    @media (min-width:1200px) {
+        text-align: left;
+    }
+}
+.social-icon-list-footer{
+    display: flex;
+    column-gap: 10px;    flex-wrap: wrap;
+    flex-direction: row;    align-content: space-between;
+    width: 206px;    height: 80px;
+}
+.icon-item-footer{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-footer{
+    width: 20px;    fill: $white;
+    height: 20px;    position: absolute;
+}
+.circle-footer{
+    border-radius: 360px;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+}
+.spam-form{
+    display: flex;    flex-wrap: wrap;
+    flex-direction: column;    align-items: center;
+    text-transform: uppercase;    height: min-content;
+    justify-content: space-between;
+    gap: 20px 12px;
+    width: 450px;
+    @media (min-width:1200px) {
+        width: 570px;    flex-direction: row;
+    }
+}
+.spam-text{
+    @extend %main-700;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    width: 100%;    color: $white;
+    text-transform: inherit;    text-align: center;
+    @media (min-width:1200px) {
+        text-align: left;
+    }
+}
+#spam{
+    @extend %main-400;
+    width: 450px;    height: 50px;
+    border: 1px solid rgba($white, 0.3);    border-radius: 4px;
+    background-color: $footer-background-color;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    @media (min-width:1200px) {
+        width: 358px;
+    }
+}
+.spam-accept{
+    @extend %button;    display: flex;
+    align-items: center;    justify-content: center;
+}
+.spam-icon{
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    fill: $white;
+}
