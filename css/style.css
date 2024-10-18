@@ -771,6 +771,7 @@ html {
 }
 
 .clients-item:hover {
+  border: #2196f3;
   cursor: pointer;
 }
 .clients-item:hover .client {
